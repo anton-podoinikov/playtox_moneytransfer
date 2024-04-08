@@ -46,7 +46,7 @@ public class StartTransactions {
                         BigDecimal amount = BigDecimal.valueOf(ThreadLocalRandom.current().nextDouble()).multiply(maxTransferAmount);
                         accountService.transfer(fromAccount, toAccount, amount);
 
-                        Thread.sleep(ThreadLocalRandom.current().nextInt(200, 1001)); // Shorter and randomized sleep
+                        Thread.sleep(ThreadLocalRandom.current().nextInt(1001, 2000));
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
                         logger.error("Thread was interrupted", e);
